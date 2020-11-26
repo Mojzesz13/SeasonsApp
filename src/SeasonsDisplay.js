@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SeasonDisplay = ()=>{
-    return <div>Seasons</div>
+class SeasonDisplay extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return <div>Latitude: {this.props.lat}</div>;
+  }
 }
-
 export default SeasonDisplay;
