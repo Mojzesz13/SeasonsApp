@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import './SeasonsDisplay.css';
 
 const seasonConfig = {
   summer: {
@@ -21,18 +22,15 @@ const getSeason = (lat, month) => {
 };
 
 class SeasonDisplay extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const season = getSeason(this.props.lat, new Date().getMonth());
     const { text, iconName } = seasonConfig[season];
-    
+
     return (
-      <div>
-        <i className={`${iconName} icon`} />
+      <div className={`season-container ${season}`}>
+        <i className={`icon-left massive ${iconName} icon`} />
         <h1>{text}</h1>
-        <i className={`${iconName} icon`} />
+        <i className={`icon-right massive ${iconName} icon`} />
       </div>
     );
   }

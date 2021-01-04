@@ -1,0 +1,34 @@
+.season-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.season-container.summer {
+  background-color: orangered;
+}
+
+.season-container.winter {
+  background-color: aqua;
+}
+
+.season-container.summer i {
+  color: darkgreen;
+}
+
+.season-container.winter i {
+  color: chartreuse;
+}
+
+.season-container .icon-right {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.season-container .icon-left {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
